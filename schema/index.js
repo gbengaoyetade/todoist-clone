@@ -1,29 +1,25 @@
 const graphql = require('graphql');
-const { TodoType, UserType } = require('./schema');
-const { users, todos } = require('../helpers/data');
+const {
+  getTodo, getTodos, getUser, getUsers,
+} = require('../queries');
 
-const { GraphQLObjectType, GraphQLString, GraphQLSchema } = graphql;
+const { createTodo, signup } = require('../mutations');
+
+const { GraphQLObjectType, GraphQLSchema } = graphql;
 
 const RootQuery = new GraphQLObjectType({
   name: 'RootQueryType',
   fields: {
-    todos: {
-      type: TodoType,
-      args: { id: { type: GraphQLString } },
-      resolve(parent, args) {
-        const foundTodo = todos.filter(todo => todo.id === args.id);
-        return foundTodo[0];
-      },
-    },
-
-    users: {
-      type: UserType,
-      args: { id: { type: GraphQLString } },
-      resolve(parent, args) {
-        return users.filter(user => user.id === args.id)[0];
-      },
-    },
+    getTodo,
+    getTodos,
+    getUser,
+    getUsers,
   },
 });
 
-module.exports = new GraphQLSchema({ query: RootQuery });
+const Mutation = new GraphQLObjectType({
+  name: 'Mutation',
+  fields: { createTodo, signup },
+});
+
+module.exports = new GraphQLSchema({ query: RootQuery, mutation: Mutation });
