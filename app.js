@@ -1,10 +1,13 @@
+require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 const graphqlHTTP = require('express-graphql');
 const mongoose = require('mongoose');
 const schema = require('./schema');
 
 const app = express();
 
+app.use(cors());
 app.use('/graphql', graphqlHTTP({ schema, graphiql: true }));
 
 app.get('/*', (req, res) => {
@@ -17,7 +20,7 @@ app.listen(port, () => {
 });
 
 mongoose
-  .connect(process.env.DB_URL)
+  .connect(process.env.DB_URL, { useNewUrlParser: true })
   .then(() => {
     console.log('Database connection established');
   })
