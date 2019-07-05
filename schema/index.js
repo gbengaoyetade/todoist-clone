@@ -1,6 +1,6 @@
 const graphql = require('graphql');
 const {
-  getTodo, getTodos, getUser, getUsers,
+  getTodo, getTodos, getUser, getUsers, login,
 } = require('../queries');
 
 const { createTodo, signup } = require('../mutations');
@@ -14,6 +14,7 @@ const RootQuery = new GraphQLObjectType({
     getTodos,
     getUser,
     getUsers,
+    login,
   },
 });
 

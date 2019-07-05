@@ -1,8 +1,8 @@
-const graphl = require('graphql');
-const { UserType } = require('../models');
+const graphql = require('graphql');
+const { UserType } = require('../types');
 const { User } = require('../models');
 
-const { GraphQLString } = graphl;
+const { GraphQLString } = graphql;
 const signup = {
   type: UserType,
   args: {
