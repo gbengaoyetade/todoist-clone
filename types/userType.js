@@ -12,12 +12,13 @@ const UserType = new GraphQLObjectType({
       id: { type: GraphQLString },
       name: { type: GraphQLString },
       email: { type: GraphQLString },
+      password: { type: GraphQLString },
       profilePictureURL: { type: GraphQLString },
+      createdAt: { type: GraphQLString },
       todos: {
         type: new GraphQLList(TodoType),
         resolve(parent) {
-          // eslint-disable-next-line no-underscore-dangle
-          return Todo.find({ createdBy: parent._id });
+          return Todo.find({ createdBy: parent.id });
         },
       },
     };

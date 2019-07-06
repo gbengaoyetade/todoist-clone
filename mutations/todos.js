@@ -1,5 +1,5 @@
 const graphql = require('graphql');
-const { TodoType } = require('../models');
+const { TodoType } = require('../types');
 const { Todo } = require('../models');
 
 const { GraphQLString } = graphql;

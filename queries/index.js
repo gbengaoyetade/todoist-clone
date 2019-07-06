@@ -1,6 +1,10 @@
 const { getTodo, getTodos } = require('./todos');
-const { getUser, getUsers } = require('./users');
+const { getUser, getUsers, login } = require('./users');
 
 module.exports = {
-  getTodo, getTodos, getUser, getUsers,
+  getTodo,
+  getTodos,
+  getUser,
+  getUsers,
+  login,
 };
