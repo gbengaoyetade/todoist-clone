@@ -59,7 +59,7 @@ const login = {
       id: user.id,
       email: user.email,
     };
-    const userToken = jwt.sign(userDetails, process.env.TOKEN_SECRET, { expiresIn: '1h' });
+    const userToken = jwt.sign(userDetails, process.env.TOKEN_SECRET, { expiresIn: '2h' });
     userDetails.token = userToken;
     return userDetails;
   },
