@@ -4,11 +4,15 @@ const cors = require('cors');
 const graphqlHTTP = require('express-graphql');
 const mongoose = require('mongoose');
 const schema = require('./schema');
+const auth = require('./middleware/auth');
+const resolvers = require('./resolvers');
 
 const app = express();
 
 app.use(cors());
-app.use('/graphql', graphqlHTTP({ schema, graphiql: true }));
+app.use(auth);
+
+app.use('/graphql', graphqlHTTP({ schema, rootValue: resolvers, graphiql: true }));
 
 app.get('/*', (req, res) => {
   res.send({ message: 'Welcome to graphql' });
