@@ -23,11 +23,6 @@ const schema = buildSchema(`
     updatedAt: String!
   }
 
-   input TodoInput {
-    text: String!
-    createdBy: String!
-  }
-
   type RootQuery {
     getTodo(id: String! ): Todo!
     getTodos(email: String): [Todo]
@@ -37,7 +32,7 @@ const schema = buildSchema(`
   }
 
   type RootMutation {
-    createTodo(todoInput: TodoInput): Todo!
+    createTodo(text: String!, createdBy: String!): Todo!
     signup(email: String!, password: String!): User
   }
 
