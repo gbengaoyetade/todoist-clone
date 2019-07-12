@@ -1,7 +1,7 @@
 /* eslint-disable no-underscore-dangle */
 const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
 const { User } = require('../models');
+const { generateUserToken } = require('./helpers');
 
 const userResolvers = {
   getUsers: () => User.find()
@@ -25,24 +25,26 @@ const userResolvers = {
       id: user.id,
       email: user.email,
     };
-    const userToken = jwt.sign(userDetails, process.env.TOKEN_SECRET, { expiresIn: '2h' });
+    const userToken = generateUserToken(user);
     userDetails.token = userToken;
     return userDetails;
   },
 
   signup: async (args) => {
-    const { email, password } = args.userInput;
-
+    const { email, password } = args;
+    const transformedEmail = email.toLowerCase();
     const newUser = new User({
       password,
       email,
-      createdBy: email,
-      updatedBy: email,
+      createdBy: transformedEmail,
+      updatedBy: transformedEmail,
       createdAt: Date.now(),
       updatedAt: Date.now(),
     });
     try {
       const createdUser = await newUser.save();
+      const token = generateUserToken(newUser);
+      createdUser.token = token;
       return createdUser;
     } catch (error) {
       return error;

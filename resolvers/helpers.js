@@ -1,5 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable no-use-before-define */
+const jwt = require('jsonwebtoken');
 const { User, Todo } = require('../models');
 
 const getTodos = async (args) => {
@@ -26,4 +27,13 @@ const getUser = (args) => {
     .catch(error => error);
 };
 
-module.exports = { getTodos, getUser };
+const generateUserToken = (user) => {
+  const userDetails = {
+    id: user.id,
+    email: user.email,
+  };
+  const token = jwt.sign(userDetails, process.env.TOKEN_SECRET, { expiresIn: '2h' });
+  return token;
+};
+
+module.exports = { getTodos, getUser, generateUserToken };
