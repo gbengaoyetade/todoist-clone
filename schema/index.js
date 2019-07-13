@@ -1,26 +1,46 @@
-const graphql = require('graphql');
-const {
-  getTodo, getTodos, getUser, getUsers, login,
-} = require('../queries');
+const { buildSchema } = require('graphql');
 
-const { createTodo, signup } = require('../mutations');
+const schema = buildSchema(`
+  type User {
+    id: ID!
+    name: String!
+    email: String!
+    profilePicURL: String!
+    token: String!
+    createdAt: String!
+    updatedAt: String!
+    updatedBy: String!
+    todos: [Todo]
+  }
 
-const { GraphQLObjectType, GraphQLSchema } = graphql;
+  type Todo {
+    id: ID!
+    text: String!
+    isComplete: Boolean!
+    isDeleted: Boolean!
+    createdBy: User!
+    updatedBy: User!
+    createdAt: String!
+    updatedAt: String!
+  }
 
-const RootQuery = new GraphQLObjectType({
-  name: 'RootQueryType',
-  fields: {
-    getTodo,
-    getTodos,
-    getUser,
-    getUsers,
-    login,
-  },
-});
+  type RootQuery {
+    getTodo(id: String! ): Todo!
+    getTodos(email: String): [Todo]
+    getUser(email: String!): User!
+    getUsers: [User]!
+    login(email: String!, password: String!): User
+  }
 
-const Mutation = new GraphQLObjectType({
-  name: 'Mutation',
-  fields: { createTodo, signup },
-});
+  type RootMutation {
+    createTodo(text: String!, createdBy: String!): Todo!
+    signup(email: String!, password: String!): User
+  }
 
-module.exports = new GraphQLSchema({ query: RootQuery, mutation: Mutation });
+  schema {
+    query: RootQuery
+    mutation: RootMutation
+  }
+`);
+
+module.exports = schema;
