@@ -7,10 +7,10 @@ const getTodos = async (args) => {
   const { email } = args;
   try {
     const todos = await Todo.find({ createdBy: email });
-
     return todos.map(todo => ({
       ...todo._doc,
       createdBy: getUser.bind(this, { email: todo.createdBy }),
+      updatedBy: getUser.bind(this, { email: todo.updatedBy }),
     }));
   } catch (error) {
     return error;

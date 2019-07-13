@@ -1,5 +1,5 @@
 const userResolvers = require('./users');
 const todoResolvers = require('./todos');
-const helpers = require('./helpers');
+const helpers = require('./includes');
 
 module.exports = { ...todoResolvers, ...userResolvers, ...helpers };
