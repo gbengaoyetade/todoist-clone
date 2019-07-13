@@ -6,12 +6,15 @@ const authMiddleware = (req, res, next) => {
     req.isAuthenticated = false;
     return next();
   }
+  const tokenString = token.split(' ')[1];
   try {
-    const decoded = jwt.verify(token, process.env.TOKEN_SECRET);
+    const decoded = jwt.verify(tokenString, process.env.TOKEN_SECRET);
+
     if (!decoded) {
       req.isAuthenticated = false;
       return next();
     }
+
     req.isAuthenticated = true;
     req.userId = decoded.id;
     return next();

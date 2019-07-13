@@ -19,6 +19,7 @@ const schema = buildSchema(`
     isComplete: Boolean!
     isDeleted: Boolean!
     createdBy: User!
+    updatedBy: User!
     createdAt: String!
     updatedAt: String!
   }
