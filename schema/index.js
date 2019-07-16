@@ -6,7 +6,7 @@ const schema = buildSchema(`
     name: String!
     email: String!
     profilePicURL: String!
-    token: String!
+    token: String
     createdAt: String!
     updatedAt: String!
     updatedBy: String!
