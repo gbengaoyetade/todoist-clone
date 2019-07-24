@@ -2,10 +2,10 @@
   "name": "todoist-clone",
   "version": "1.0.0",
   "description": "",
-  "main": "src/app.js",
+  "main": "server/app.js",
   "scripts": {
-    "start": "nodemon app.js",
-    "test": "./node_modules/.bin/mocha",
+    "start": "nodemon server/app.js",
+    "test": "./node_modules/.bin/mocha  server/**/*.test.js",
     "test:coverage": "nyc --reporter=html --reporter=text mocha --exit"
   },
   "keywords": [],

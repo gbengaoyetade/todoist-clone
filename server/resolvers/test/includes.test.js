@@ -1,7 +1,7 @@
 const assert = require('assert');
 const jwt = require('jsonwebtoken');
 
-const { generateUserToken } = require('../resolvers');
+const { generateUserToken } = require('../index');
 
 describe('generateToken', () => {
   it('should generate token when details are passed to it', () => {
