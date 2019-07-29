@@ -4,9 +4,9 @@
   "description": "",
   "main": "server/app.js",
   "scripts": {
-    "start": "nodemon server/app.js",
+    "start:server": "nodemon src/server/app.js",
     "start:client": "webpack-dev-server --config webpack.config.js --open",
-    "test": "./node_modules/.bin/mocha  server/**/*.test.js",
+    "test": "./node_modules/.bin/mocha  src/server/**/*.test.js",
     "test:coverage": "nyc --reporter=html --reporter=text mocha --exit"
   },
   "keywords": [],

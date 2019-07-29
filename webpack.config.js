@@ -2,12 +2,12 @@ const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 const htmlPlugin = new HtmlWebPackPlugin({
-  template: "./client/index.html",
+  template: "./src/client/index.html",
   filename: "./index.html"
 });
 
 const config = {
-  entry: "./client/index.js",
+  entry: "./src/client/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "main.js"
