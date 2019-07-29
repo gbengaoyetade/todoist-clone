@@ -20,11 +20,18 @@ const config = {
         use: {
           loader: "babel-loader"
         }
+      },
+      {
+        test: /\.scss$/,
+        use: ["style-loader", "css-loader", "sass-loader"]
       }
     ]
   },
   mode: "development",
-  plugins: [htmlPlugin]
+  plugins: [htmlPlugin],
+  devServer: {
+    port: 3001
+  }
 };
 
 module.exports = config;
