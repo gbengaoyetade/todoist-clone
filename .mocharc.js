@@ -1,4 +1,9 @@
 const dotenv = require('dotenv');
+const enzyme = require('enzyme');
+const Adapter = require('enzyme-adapter-react-16');
+
+enzyme.configure({ adapter: new Adapter() });
+
 dotenv.config();
 
 module.exports = {
