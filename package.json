@@ -6,7 +6,8 @@
   "scripts": {
     "start:server": "nodemon src/server/app.js",
     "start:client": "webpack-dev-server --config webpack.config.js --open",
-    "test": "./node_modules/.bin/mocha  src/server/**/*.test.js",
+    "test": "./node_modules/.bin/mocha  src/**/*.test.js --require @babel/register --require babel-polyfill",
+    "test:server": "./node_modules/.bin/mocha  src/server/**/*.test.js",
     "test:client": "./node_modules/.bin/mocha src/client/**/*.test.js --require @babel/register",
     "test:coverage": "nyc --reporter=html --reporter=text mocha --exit"
   },
@@ -37,6 +38,7 @@
     "@babel/register": "^7.5.5",
     "babel-core": "^7.0.0-0",
     "babel-loader": "^8.0.6",
+    "babel-polyfill": "^6.26.0",
     "coveralls": "^3.0.5",
     "enzyme-adapter-react-16": "^1.14.0",
     "eslint": "^5.16.0",
