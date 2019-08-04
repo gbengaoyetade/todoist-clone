@@ -1,8 +1,9 @@
 /* eslint-disable no-underscore-dangle */
-const bcrypt = require('bcryptjs');
+// const bcrypt = require('bcryptjs');
 const { User } = require('../models');
 const { generateUserToken } = require('./includes');
 const { AUTH_ERROR } = require('../helpers');
+const { authenticateGoogle } = require('../helpers');
 
 const userResolvers = {
   getUsers: (args, req) => {
@@ -14,22 +15,31 @@ const userResolvers = {
       .catch(error => error);
   },
 
-  login: async (args) => {
-    const { password, email } = args;
-    const user = await User.findOne({ email });
-    if (!user) {
-      throw new Error('User does not exist');
+  login: async (args, req) => {
+    try {
+      const { data } = await authenticateGoogle(req);
+      if (!data) {
+        throw new Error('');
+      }
+      console.log(data._json);
+    } catch (error) {
+      throw new Error('User not authenticated');
     }
+    // const { password, email } = args;
+    // const user = await User.findOne({ email });
+    // if (!user) {
+    //   throw new Error('User does not exist');
+    // }
 
-    const isAuthenticated = await bcrypt.compare(password, user.password);
+    // const isAuthenticated = await bcrypt.compare(password, user.password);
 
-    if (!isAuthenticated) {
-      throw new Error('Password incorrect');
-    }
+    // if (!isAuthenticated) {
+    //   throw new Error('Password incorrect');
+    // }
 
-    const userToken = generateUserToken(user);
-    user.token = userToken;
-    return user;
+    // const userToken = generateUserToken(user);
+    // user.token = userToken;
+    // return user;
   },
 
   signup: async (args) => {

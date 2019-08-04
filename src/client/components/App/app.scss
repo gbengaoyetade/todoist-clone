@@ -2,4 +2,12 @@ body {
   margin: 0;
   padding: 0;
   background: #ccc;
+  color: #aaa;
+}
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }

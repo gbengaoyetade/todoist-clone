@@ -30,7 +30,7 @@ const config = {
   mode: 'development',
   plugins: [htmlPlugin],
   devServer: {
-    port: 3001,
+    port: 4001,
   },
 };
 
