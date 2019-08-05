@@ -6,9 +6,9 @@
   "scripts": {
     "start:server": "nodemon src/server/app.js",
     "start:client": "webpack-dev-server --config webpack.config.js --open",
-    "test": "./node_modules/.bin/mocha  src/**/*.test.js --require @babel/register --require babel-polyfill",
+    "test": "./node_modules/.bin/mocha  src/**/*.test.js --require @babel/register --require babel-polyfill --require ignore-styles",
     "test:server": "./node_modules/.bin/mocha  src/server/**/*.test.js",
-    "test:client": "./node_modules/.bin/mocha src/client/**/*.test.js --require @babel/register",
+    "test:client": "./node_modules/.bin/mocha src/client/**/*.test.js --require babel-polyfill --require @babel/register",
     "test:coverage": "nyc --reporter=html --reporter=text mocha --exit"
   },
   "keywords": [],
@@ -49,6 +49,7 @@
     "eslint-plugin-import": "^2.17.3",
     "eslint-plugin-react": "^7.14.3",
     "html-webpack-plugin": "^3.2.0",
+    "ignore-styles": "^5.0.1",
     "jest": "^24.8.0",
     "mocha": "^6.1.4",
     "nodemon": "^1.19.1",
