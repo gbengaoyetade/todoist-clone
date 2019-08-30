@@ -31,6 +31,7 @@ const config = {
   plugins: [htmlPlugin],
   devServer: {
     port: 4001,
+    historyApiFallback: true,
   },
 };
 
