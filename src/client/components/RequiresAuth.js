@@ -1,9 +1,12 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
+import { useCookies } from 'react-cookie';
+import Proptypes from 'prop-types';
 
 const RequiresAuth = ({ component: Component, ...rest }) => {
+  const [cookie] = useCookies();
   const render = (props) => {
-    if (!document.cookie.todoist_clone) {
+    if (!cookie.todo_token) {
       return <Redirect to="/" />;
     }
     return <Component {...props} />;
@@ -12,4 +15,7 @@ const RequiresAuth = ({ component: Component, ...rest }) => {
   return <Route {...rest} render={render} />;
 };
 
+RequiresAuth.propTypes = {
+  component: Proptypes.func,
+};
 export default RequiresAuth;

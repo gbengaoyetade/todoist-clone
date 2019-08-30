@@ -1,15 +1,37 @@
 import React from 'react';
 import { GoogleLogin } from 'react-google-login';
+import gql from 'graphql-tag';
+import { useMutation } from '@apollo/react-hooks';
+import { useCookies } from 'react-cookie';
 import './login.scss';
 
+const LOGIN = gql`
+  mutation GoogleAuth($accessToken: String!) {
+    googleAuth(accessToken: $accessToken) {
+      token
+    }
+  }
+`;
 const Login = () => {
+  const [, setCookie] = useCookies();
+  const [loginUser, { data }] = useMutation(LOGIN);
+  if (data && data.googleAuth) {
+    setCookie('todo_token', data.googleAuth.token);
+    window.location.replace('/app');
+  }
+  /**
+   *
+   * @param {Object} response
+   * @returns {String}
+   */
   const responseGoogle = (response) => {
-    console.log(response);
+    if (response) {
+      loginUser({ variables: { accessToken: response.tokenId } });
+    }
+    return false;
   };
 
-  const errorResponse = (error) => {
-    console.log({ error });
-  };
+  const errorResponse = () => false;
 
   return (
     <div className="login-form">

@@ -1,11 +1,5 @@
 import React from 'react';
-import Login from '../Login';
-import './app.scss';
 
-const App = () => (
-    <div className="login-wrapper">
-      <Login />
-    </div>
-);
+const App = () => <h1> Todo App</h1>;
 
 export default App;
