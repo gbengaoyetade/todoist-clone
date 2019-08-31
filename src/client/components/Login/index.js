@@ -16,7 +16,7 @@ const Login = () => {
   const [, setCookie] = useCookies();
   const [loginUser, { data }] = useMutation(LOGIN);
   if (data && data.googleAuth) {
-    setCookie('todo_token', data.googleAuth.token);
+    setCookie('todoToken', data.googleAuth.token);
     window.location.replace('/app');
   }
   /**

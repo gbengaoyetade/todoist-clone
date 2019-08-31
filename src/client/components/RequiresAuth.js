@@ -6,7 +6,7 @@ import Proptypes from 'prop-types';
 const RequiresAuth = ({ component: Component, ...rest }) => {
   const [cookie] = useCookies();
   const render = (props) => {
-    if (!cookie.todo_token) {
+    if (!cookie.todoToken) {
       return <Redirect to="/" />;
     }
     return <Component {...props} />;
