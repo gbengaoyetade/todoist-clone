@@ -29,12 +29,13 @@ const schema = buildSchema(`
     getTodos(email: String): [Todo]
     getUser(email: String!): User!
     getUsers: [User]!
-    login(email: String!, password: String!): User
   }
 
   type RootMutation {
     createTodo(text: String!, createdBy: String!): Todo!
     signup(email: String!, password: String!): User
+    login(email: String!, password: String!): User
+    googleAuth(accessToken: String!): User
   }
 
   schema {

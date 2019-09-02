@@ -1,9 +1,5 @@
-import React from "react";
-import Login from "../Login";
-import "./app.scss";
+import React from 'react';
 
-const App = () => {
-  return <Login />;
-};
+const App = () => <h1> Todo App</h1>;
 
 export default App;

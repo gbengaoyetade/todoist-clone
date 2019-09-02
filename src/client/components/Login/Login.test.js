@@ -8,6 +8,6 @@ describe('Login', () => {
   const wrapper = shallow(<Login />);
 
   it('should render without crashing', () => {
-    expect(wrapper.find('input').length).to.equal(2);
+    expect(wrapper.find('input').length).to.equal(3);
   });
 });

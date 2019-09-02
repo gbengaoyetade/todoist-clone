@@ -11,7 +11,6 @@ const app = express();
 
 app.use(cors());
 app.use(auth);
-
 app.use('/graphql', graphqlHTTP({ schema, rootValue: resolvers, graphiql: true }));
 
 app.get('/*', (req, res) => {
@@ -29,5 +28,6 @@ mongoose
     console.log('Database connection established');
   })
   .catch(() => {
-    throw new Error('Error connecting to the database');
+    console.log('Error connecting to the database');
+    process.exit(1);
   });
