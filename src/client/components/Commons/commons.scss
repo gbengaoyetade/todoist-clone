@@ -1,0 +1,94 @@
+.app-nav {
+  background-color: #292929;
+  height: 50px;
+  margin: 0;
+  border-bottom: 1px solid #131212;
+}
+
+.nav-content {
+  width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  color: #fff;
+  margin: 0 auto;
+}
+
+.side-nav {
+  width: 300px;
+}
+
+.todo-display {
+  width: 600px;
+  background-color: #1f1f1f;
+  height: 100vh;
+}
+
+.logo {
+  padding: 3px;
+}
+
+.logo a {
+  color: #fff;
+}
+
+.logo a:hover {
+  color: #ccc;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 400px;
+  margin-left: 50px;
+}
+
+.search-bar i {
+  font-weight: 600;
+  position: relative;
+  left: 19px;
+}
+
+.search-input {
+  width: 200px;
+  background-color: transparent;
+  border: none;
+  height: 25px;
+  border-radius: 3px;
+  padding-left: 25px;
+  color: #fff;
+  outline: none;
+}
+
+.search-input:hover {
+  background-color: rgb(134, 133, 133);
+  transition: background-color 0.7s ease;
+}
+
+.search-input:focus {
+  width: 400px;
+  transition: width 1.1s ease;
+  background-color: transparent;
+  border: 1px solid #cccc;
+}
+
+.nav-actions {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-actions div {
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-actions div:hover {
+  background-color: #888;
+  transition: background-color 0.7s ease;
+}
