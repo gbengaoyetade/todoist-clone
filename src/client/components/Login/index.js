@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { GoogleLogin } from 'react-google-login';
 import gql from 'graphql-tag';
 import { useMutation } from '@apollo/react-hooks';
@@ -14,10 +14,15 @@ const LOGIN = gql`
 `;
 const Login = () => {
   const [, setCookie] = useCookies();
-  const [loginUser, { data }] = useMutation(LOGIN);
+  const [loginUser, { data, error: loginError }] = useMutation(LOGIN);
+  let errorMessage = '';
   if (data && data.googleAuth) {
     setCookie('todoToken', data.googleAuth.token);
     window.location.replace('/app');
+  }
+
+  if (loginError) {
+    errorMessage = loginError.message;
   }
   /**
    *
@@ -35,6 +40,7 @@ const Login = () => {
 
   return (
     <div className="login-form">
+      <span className="error">{errorMessage}</span>
       <GoogleLogin
         clientId="708231311520-m2bhnd9e38lvo7dhq4hipgno7sfpshqv.apps.googleusercontent.com"
         buttonText="Login with Google"
