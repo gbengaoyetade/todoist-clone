@@ -29,24 +29,11 @@
   padding: 3px;
 }
 
-.logo a {
-  color: #fff;
-}
-
-.logo a:hover {
-  color: #ccc;
-}
 .search-bar {
   display: flex;
   align-items: center;
   width: 400px;
   margin-left: 50px;
-}
-
-.search-bar i {
-  font-weight: 600;
-  position: relative;
-  left: 19px;
 }
 
 .search-input {
@@ -66,29 +53,52 @@
 }
 
 .search-input:focus {
-  width: 400px;
+  width: 330px;
   transition: width 1.1s ease;
   background-color: transparent;
   border: 1px solid #cccc;
 }
 
 .nav-actions {
-  width: 150px;
+  width: 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.nav-actions div {
+.nav-svg {
   cursor: pointer;
   padding: 8px;
   border-radius: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 20px;
+  height: 20px;
+  fill: #fff;
 }
 
-.nav-actions div:hover {
+.nav-svg:hover {
   background-color: #888;
   transition: background-color 0.7s ease;
+}
+
+span.error {
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #e05f5f;
+}
+
+.todo-display {
+  padding: 20px 40px;
+}
+
+.search-icon {
+  position: relative;
+  left: 2rem;
+
+  &:hover {
+    background-color: transparent;
+  }
 }

@@ -1,35 +1,41 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './commons.scss';
+import Settings from '../../assets/settings.svg';
+import Plus from '../../assets/plus.svg';
+import Heart from '../../assets/heart.svg';
+import Notification from '../../assets/notification.svg';
+import Search from '../../assets/search.svg';
+import Layers from '../../assets/layers.svg';
 
 const Nav = () => (
-    <nav className="app-nav">
-      <div className="nav-content">
-        <div className="logo">
-          <Link to="/app">
-            <i className="fas fa-layer-group"></i>
-          </Link>
+  <nav className="app-nav">
+    <div className="nav-content">
+      <div className="logo">
+        <Link to="/app">
+          <Layers className="nav-svg" />
+        </Link>
+      </div>
+      <div className="search-bar">
+        <Search className="nav-svg search-icon" />
+        <input type="text" className="search-input" />
+      </div>
+      <div className="nav-actions">
+        <div>
+          <Plus className="nav-svg" />
         </div>
-        <div className="search-bar">
-          <i className="fas fa-search"></i>
-          <input type="text" className="search-input" />
+        <div>
+          <Heart className="nav-svg" />
         </div>
-        <div className="nav-actions">
-          <div>
-            <i className="fas fa-plus"></i>
-          </div>
-          <div>
-            <i className="fas fa-star"></i>
-          </div>
-          <div>
-            <i className="fas fa-bell"></i>
-          </div>
-          <div>
-            <i className="fas fa-cog"></i>
-          </div>
+        <div>
+          <Notification className="nav-svg " />
+        </div>
+        <div>
+          <Settings className="nav-svg" />
         </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 );
 
 export default Nav;
