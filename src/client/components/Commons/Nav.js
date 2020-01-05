@@ -18,7 +18,7 @@ const Nav = () => (
       </div>
       <div className="search-bar">
         <Search className="nav-svg search-icon" />
-        <input type="text" className="search-input" />
+        <input type="text" className="search-input" placeholder="Quick Find" />
       </div>
       <div className="nav-actions">
         <div>
