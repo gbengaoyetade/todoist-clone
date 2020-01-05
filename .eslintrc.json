@@ -4,7 +4,10 @@
     "es6": true,
     "mocha": true
   },
-  "extends": ["plugin:react/recommended", "airbnb-base"],
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb-base"
+  ],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
