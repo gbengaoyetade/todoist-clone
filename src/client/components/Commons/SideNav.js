@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ExpansionPanel from './ExpansionPanel';
 import Today from '../../assets/today.svg';
 import Week from '../../assets/week.svg';
 import Inbox from '../../assets/inbox.svg';
@@ -26,6 +27,10 @@ const SideNav = () => (
         </Link>
       </li>
     </ul>
+    <ExpansionPanel title="Projects" />
+    <ExpansionPanel title="Labels" />
+    <ExpansionPanel title="Filters" />
+    <div></div>
   </div>
 );
 
