@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { GoogleLogin } from 'react-google-login';
 import gql from 'graphql-tag';
 import { useMutation } from '@apollo/react-hooks';
