@@ -27,11 +27,18 @@ const SideNav = () => (
         </Link>
       </li>
     </ul>
-    <ExpansionPanel title="Projects" />
-    <ExpansionPanel title="Labels" />
-    <ExpansionPanel title="Filters" />
-    <div></div>
+    <ExpansionPanel title="Projects">
+      <ul>
+        <li draggable>Something</li>
+        <li draggable>Something still</li>
+      </ul>
+    </ExpansionPanel>
+    <ExpansionPanel title="Labels">
+      <ul><li draggable>Something else</li></ul>
+    </ExpansionPanel>
+    <ExpansionPanel title="Filters">
+      <ul><li className="expansion-item" draggable>Another something</li></ul>
+    </ExpansionPanel>
   </div>
 );
-
 export default SideNav;

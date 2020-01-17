@@ -21,18 +21,18 @@ const Nav = () => (
         <input type="text" className="search-input" placeholder="Quick Find" />
       </div>
       <div className="nav-actions">
-        <div>
+        <button>
           <Plus className="nav-svg" />
-        </div>
-        <div>
+        </button>
+        <button>
           <Heart className="nav-svg" />
-        </div>
-        <div>
+        </button>
+        <button>
           <Notification className="nav-svg " />
-        </div>
-        <div>
+        </button>
+        <button>
           <Settings className="nav-svg" />
-        </div>
+        </button>
       </div>
     </div>
   </nav>
