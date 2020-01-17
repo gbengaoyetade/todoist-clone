@@ -11,8 +11,8 @@ const userResolvers = {
       throw new Error(AUTH_ERROR);
     }
     return User.find()
-      .then(users => users)
-      .catch(error => error);
+      .then((users) => users)
+      .catch((error) => error);
   },
 
   login: async (args) => {

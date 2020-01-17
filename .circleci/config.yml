@@ -8,4 +8,5 @@ jobs:
     steps:
       - checkout
       - run: yarn install
-      - run: yarn test
+      - run: yarn test:server
+      - run: yarn test:client

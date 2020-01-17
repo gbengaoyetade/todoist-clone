@@ -7,7 +7,7 @@ const getTodos = async (args) => {
   const { email } = args;
   try {
     const todos = await Todo.find({ createdBy: email });
-    return todos.map(todo => ({
+    return todos.map((todo) => ({
       ...todo._doc,
       createdBy: getUser.bind(this, { email: todo.createdBy }),
       updatedBy: getUser.bind(this, { email: todo.updatedBy }),
@@ -24,7 +24,7 @@ const getUser = (args) => {
       const todos = getTodos.bind(this, email);
       return { ...userDetails._doc, todos };
     })
-    .catch(error => error);
+    .catch((error) => error);
 };
 
 const generateUserToken = (user) => {
@@ -32,7 +32,9 @@ const generateUserToken = (user) => {
     id: user.id,
     email: user.email,
   };
-  const token = jwt.sign(userDetails, process.env.TOKEN_SECRET, { expiresIn: '2h' });
+  const token = jwt.sign(userDetails, process.env.TOKEN_SECRET, {
+    expiresIn: '2h',
+  });
   return token;
 };
 

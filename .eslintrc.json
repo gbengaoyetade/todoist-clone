@@ -2,9 +2,12 @@
   "env": {
     "browser": true,
     "es6": true,
-    "mocha": true
+    "jest": true
   },
-  "extends": ["plugin:react/recommended", "airbnb-base"],
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb-base"
+  ],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"

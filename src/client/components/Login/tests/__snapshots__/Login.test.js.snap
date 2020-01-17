@@ -1,0 +1,369 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login should render without crashing 1`] = `
+<MockedProvider
+  addTypename={true}
+>
+  <ApolloProvider
+    client={
+      ApolloClient {
+        "cache": InMemoryCache {
+          "addTypename": true,
+          "cacheKeyRoot": KeyTrie {
+            "weakness": true,
+          },
+          "config": Object {
+            "addTypename": true,
+            "dataIdFromObject": [Function],
+            "fragmentMatcher": HeuristicFragmentMatcher {},
+            "freezeResults": false,
+            "resultCaching": true,
+          },
+          "data": DepTrackingCache {
+            "data": Object {},
+            "depend": [Function],
+          },
+          "maybeBroadcastWatch": [Function],
+          "optimisticData": DepTrackingCache {
+            "data": Object {},
+            "depend": [Function],
+          },
+          "silenceBroadcast": false,
+          "storeReader": StoreReader {
+            "executeSelectionSet": [Function],
+            "executeStoreQuery": [Function],
+            "executeSubSelectedArray": [Function],
+            "freezeResults": false,
+          },
+          "storeWriter": StoreWriter {},
+          "typenameDocumentCache": Map {},
+          "watches": Set {},
+        },
+        "clearStoreCallbacks": Array [],
+        "defaultOptions": Object {},
+        "disableNetworkFetches": false,
+        "link": MockLink {
+          "addTypename": true,
+          "mockedResponsesByKey": Object {},
+        },
+        "localState": LocalState {
+          "cache": InMemoryCache {
+            "addTypename": true,
+            "cacheKeyRoot": KeyTrie {
+              "weakness": true,
+            },
+            "config": Object {
+              "addTypename": true,
+              "dataIdFromObject": [Function],
+              "fragmentMatcher": HeuristicFragmentMatcher {},
+              "freezeResults": false,
+              "resultCaching": true,
+            },
+            "data": DepTrackingCache {
+              "data": Object {},
+              "depend": [Function],
+            },
+            "maybeBroadcastWatch": [Function],
+            "optimisticData": DepTrackingCache {
+              "data": Object {},
+              "depend": [Function],
+            },
+            "silenceBroadcast": false,
+            "storeReader": StoreReader {
+              "executeSelectionSet": [Function],
+              "executeStoreQuery": [Function],
+              "executeSubSelectedArray": [Function],
+              "freezeResults": false,
+            },
+            "storeWriter": StoreWriter {},
+            "typenameDocumentCache": Map {},
+            "watches": Set {},
+          },
+          "client": [Circular],
+        },
+        "mutate": [Function],
+        "query": [Function],
+        "queryDeduplication": true,
+        "queryManager": QueryManager {
+          "assumeImmutableResults": false,
+          "clientAwareness": Object {
+            "name": undefined,
+            "version": undefined,
+          },
+          "dataStore": DataStore {
+            "cache": InMemoryCache {
+              "addTypename": true,
+              "cacheKeyRoot": KeyTrie {
+                "weakness": true,
+              },
+              "config": Object {
+                "addTypename": true,
+                "dataIdFromObject": [Function],
+                "fragmentMatcher": HeuristicFragmentMatcher {},
+                "freezeResults": false,
+                "resultCaching": true,
+              },
+              "data": DepTrackingCache {
+                "data": Object {},
+                "depend": [Function],
+              },
+              "maybeBroadcastWatch": [Function],
+              "optimisticData": DepTrackingCache {
+                "data": Object {},
+                "depend": [Function],
+              },
+              "silenceBroadcast": false,
+              "storeReader": StoreReader {
+                "executeSelectionSet": [Function],
+                "executeStoreQuery": [Function],
+                "executeSubSelectedArray": [Function],
+                "freezeResults": false,
+              },
+              "storeWriter": StoreWriter {},
+              "typenameDocumentCache": Map {},
+              "watches": Set {},
+            },
+          },
+          "fetchQueryRejectFns": Map {},
+          "idCounter": 1,
+          "inFlightLinkObservables": Map {},
+          "link": MockLink {
+            "addTypename": true,
+            "mockedResponsesByKey": Object {},
+          },
+          "localState": LocalState {
+            "cache": InMemoryCache {
+              "addTypename": true,
+              "cacheKeyRoot": KeyTrie {
+                "weakness": true,
+              },
+              "config": Object {
+                "addTypename": true,
+                "dataIdFromObject": [Function],
+                "fragmentMatcher": HeuristicFragmentMatcher {},
+                "freezeResults": false,
+                "resultCaching": true,
+              },
+              "data": DepTrackingCache {
+                "data": Object {},
+                "depend": [Function],
+              },
+              "maybeBroadcastWatch": [Function],
+              "optimisticData": DepTrackingCache {
+                "data": Object {},
+                "depend": [Function],
+              },
+              "silenceBroadcast": false,
+              "storeReader": StoreReader {
+                "executeSelectionSet": [Function],
+                "executeStoreQuery": [Function],
+                "executeSubSelectedArray": [Function],
+                "freezeResults": false,
+              },
+              "storeWriter": StoreWriter {},
+              "typenameDocumentCache": Map {},
+              "watches": Set {},
+            },
+            "client": [Circular],
+          },
+          "mutationStore": MutationStore {
+            "store": Object {},
+          },
+          "onBroadcast": [Function],
+          "pollingInfoByQueryId": Map {},
+          "queries": Map {},
+          "queryDeduplication": true,
+          "queryStore": QueryStore {
+            "store": Object {},
+          },
+          "ssrMode": false,
+          "transformCache": WeakMap {},
+        },
+        "reFetchObservableQueries": [Function],
+        "resetStore": [Function],
+        "resetStoreCallbacks": Array [],
+        "store": DataStore {
+          "cache": InMemoryCache {
+            "addTypename": true,
+            "cacheKeyRoot": KeyTrie {
+              "weakness": true,
+            },
+            "config": Object {
+              "addTypename": true,
+              "dataIdFromObject": [Function],
+              "fragmentMatcher": HeuristicFragmentMatcher {},
+              "freezeResults": false,
+              "resultCaching": true,
+            },
+            "data": DepTrackingCache {
+              "data": Object {},
+              "depend": [Function],
+            },
+            "maybeBroadcastWatch": [Function],
+            "optimisticData": DepTrackingCache {
+              "data": Object {},
+              "depend": [Function],
+            },
+            "silenceBroadcast": false,
+            "storeReader": StoreReader {
+              "executeSelectionSet": [Function],
+              "executeStoreQuery": [Function],
+              "executeSubSelectedArray": [Function],
+              "freezeResults": false,
+            },
+            "storeWriter": StoreWriter {},
+            "typenameDocumentCache": Map {},
+            "watches": Set {},
+          },
+        },
+        "typeDefs": undefined,
+        "version": "2.6.8",
+        "watchQuery": [Function],
+      }
+    }
+  >
+    <Login>
+      <div
+        className="login-form"
+      >
+        <span
+          className="error"
+        />
+        <e
+          accessType="online"
+          buttonText="Login with Google"
+          clientId="708231311520-m2bhnd9e38lvo7dhq4hipgno7sfpshqv.apps.googleusercontent.com"
+          cookiePolicy="single_host_origin"
+          disabledStyle={
+            Object {
+              "opacity": 0.6,
+            }
+          }
+          fetchBasicProfile={true}
+          icon={true}
+          isSignedIn={false}
+          jsSrc="https://apis.google.com/js/api.js"
+          onFailure={[Function]}
+          onRequest={[Function]}
+          onSuccess={[Function]}
+          prompt=""
+          scope="profile email"
+          tag="button"
+          theme="light"
+          type="button"
+          uxMode="popup"
+        >
+          <button
+            disabled={true}
+            onClick={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#fff",
+                "border": "1px solid transparent",
+                "borderRadius": 2,
+                "boxShadow": "0 2px 2px 0 rgba(0, 0, 0, .24), 0 0 1px 0 rgba(0, 0, 0, .24)",
+                "color": "rgba(0, 0, 0, .54)",
+                "display": "inline-flex",
+                "fontFamily": "Roboto, sans-serif",
+                "fontSize": 14,
+                "fontWeight": "500",
+                "opacity": 0.6,
+                "padding": 0,
+              }
+            }
+            type="button"
+          >
+            <d
+              active={false}
+              key="1"
+            >
+              <div
+                style={
+                  Object {
+                    "background": "#fff",
+                    "borderRadius": 2,
+                    "marginRight": 10,
+                    "padding": 10,
+                  }
+                }
+              >
+                <svg
+                  height="18"
+                  width="18"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    fill="#000"
+                    fillRule="evenodd"
+                  >
+                    <path
+                      d="M9 3.48c1.69 0 2.83.73 3.48 1.34l2.54-2.48C13.46.89 11.43 0 9 0 5.48 0 2.44 2.02.96 4.96l2.91 2.26C4.6 5.05 6.62 3.48 9 3.48z"
+                      fill="#EA4335"
+                    />
+                    <path
+                      d="M17.64 9.2c0-.74-.06-1.28-.19-1.84H9v3.34h4.96c-.1.83-.64 2.08-1.84 2.92l2.84 2.2c1.7-1.57 2.68-3.88 2.68-6.62z"
+                      fill="#4285F4"
+                    />
+                    <path
+                      d="M3.88 10.78A5.54 5.54 0 0 1 3.58 9c0-.62.11-1.22.29-1.78L.96 4.96A9.008 9.008 0 0 0 0 9c0 1.45.35 2.82.96 4.04l2.92-2.26z"
+                      fill="#FBBC05"
+                    />
+                    <path
+                      d="M9 18c2.43 0 4.47-.8 5.96-2.18l-2.84-2.2c-.76.53-1.78.9-3.12.9-2.38 0-4.4-1.57-5.12-3.74L.97 13.04C2.45 15.98 5.48 18 9 18z"
+                      fill="#34A853"
+                    />
+                    <path
+                      d="M0 0h18v18H0z"
+                      fill="none"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </d>
+            <g
+              icon={true}
+              key="2"
+            >
+              <span
+                style={
+                  Object {
+                    "fontWeight": 500,
+                    "paddingBottom": 10,
+                    "paddingLeft": 0,
+                    "paddingRight": 10,
+                    "paddingTop": 10,
+                  }
+                }
+              >
+                Login with Google
+              </span>
+            </g>
+          </button>
+        </e>
+        <form>
+          <input
+            placeholder="Email"
+            required={true}
+            type="email"
+          />
+          <input
+            placeholder="Password"
+            required={true}
+            type="password"
+          />
+          <input
+            className="login-button"
+            type="button"
+            value="login"
+          />
+        </form>
+      </div>
+    </Login>
+  </ApolloProvider>
+</MockedProvider>
+`;
